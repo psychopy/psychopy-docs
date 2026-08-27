@@ -48,10 +48,10 @@ Download
         
         We will continue to release new versions until PsychoPy Studio is stable enough to replace it.
 
-        .. button-link:: https://github.com/psychopy/psychopy/releases/download/2026.2.2/StandalonePsychoPy-2026.2.2-win64-3.10.exe
+        .. button-link:: https://github.com/psychopy/psychopy/releases/download/2026.2.3/StandalonePsychoPy-2026.2.3-win64-3.10.exe
           :color: primary
 
-          PsychoPy Standalone 2026.2.2
+          PsychoPy Standalone 2026.2.3
       
       .. grid-item-card::  PsychoPy Studio (Beta)
 
@@ -59,10 +59,10 @@ Download
         
         The underlying experiment engine is still Python, but Studio provides a smoother, more user-friendly interface and better version independence with useVersion.
 
-        .. button-link:: https://github.com/psychopy/psychopy/releases/download/2026.2.2/PsychoPy_Studio_2026.2.2.exe
+        .. button-link:: https://github.com/psychopy/psychopy/releases/download/2026.2.3/PsychoPy_Studio_2026.2.3.exe
           :color: primary
 
-          PsychoPy Studio 2026.2.2 
+          PsychoPy Studio 2026.2.3 
   
   .. tab-item:: MacOS
     :class-label: mac-tab
@@ -76,10 +76,10 @@ Download
         
         We will continue to release new versions until PsychoPy Studio is stable enough to replace it.
 
-        .. button-link:: https://github.com/psychopy/psychopy/releases/download/2026.2.2/StandalonePsychoPy-2026.2.2-macos-arm64-3.11.dmg
+        .. button-link:: https://github.com/psychopy/psychopy/releases/download/2026.2.3/StandalonePsychoPy-2026.2.3-macos-arm64-3.11.dmg
           :color: primary
 
-          PsychoPy Standalone 2026.2.2
+          PsychoPy Standalone 2026.2.3
       
       .. grid-item-card::  PsychoPy Studio (Beta)
 
@@ -87,10 +87,10 @@ Download
         
         The underlying experiment engine is still Python, but Studio provides a smoother, more user-friendly interface and better version independence with useVersion.
 
-        .. button-link:: https://github.com/psychopy/psychopy/releases/download/2026.2.2/PsychoPy_Studio_2026.2.2.dmg
+        .. button-link:: https://github.com/psychopy/psychopy/releases/download/2026.2.3/PsychoPy_Studio_2026.2.3.dmg
           :color: primary
 
-          PsychoPy Studio 2026.2.2
+          PsychoPy Studio 2026.2.3
   
   .. tab-item:: Linux
     :class-label: linux-tab
@@ -136,11 +136,11 @@ Download
 
         Plus, it's much easier to install on Linux!
 
-        .. button-link:: https://github.com/psychopy/psychopy/releases/download/2026.2.2/PsychoPy_Studio_2026.2.2.AppImage
-          :tooltip: PsychoPy_Studio_2026.2.2.AppImage
+        .. button-link:: https://github.com/psychopy/psychopy/releases/download/2026.2.3/PsychoPy_Studio_2026.2.3.AppImage
+          :tooltip: PsychoPy_Studio_2026.2.3.AppImage
           :color: primary
 
-          PsychoPy Studio 2026.2.2
+          PsychoPy Studio 2026.2.3
 
 **For all versions** see the `PsychoPy releases on github <https://github.com/psychopy/psychopy/releases>`_
 
