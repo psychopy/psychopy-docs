@@ -1,3 +1,5 @@
+.. include:: /price_defs.rst
+
 .. _psychopyVersusEPrime:
 
 Comparing PsychoPy with E-Prime
@@ -58,7 +60,7 @@ Pricing and vendor lock-in
 
 E-Prime costs roughly $995 per concurrent license, and adds a further $1,995.00 if you want to use a plug-in for EEG or eye-tracking extensions (for each extension). Its experiment file formats are proprietary and its programming language (Visual Basic) is no longer widely used in any other context.
 
-PsychoPy is free and open-source software. Running studies online using Pavlovia does incur a small charge but even that is small compared to standard lab use of E-Prime (£0.26 per respondent or £2000 for an unlimited institutional licence). PsychoPy also offers paid consultancy and training options. PsychoPy uses the Python language which is widely used in many other contexts, and its experiment file formats are open and human-readable (XML-based and with a public format description). 
+PsychoPy is free and open-source software. Running studies online using Pavlovia does incur a small charge but even that is small compared to standard lab use of E-Prime (|price.university.credit| per respondent or |price.university.licenceonly| for an unlimited institutional licence). PsychoPy also offers paid consultancy and training options. PsychoPy uses the Python language which is widely used in many other contexts, and its experiment file formats are open and human-readable (XML-based and with a public format description). 
 
 Community
 ---------

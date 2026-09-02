@@ -1,3 +1,4 @@
+.. include:: /price_defs.rst
 
 Pricing
 ====================================================================
@@ -26,7 +27,7 @@ Pavlovia is a secure server for hosting, sharing and running experiments online.
 
 Unsure? You can `book a free one-hour demo <https://forms.clickup.com/4570406/f/4bf96-7612/VKR8FZTODF28ICX863>`_.
 
-If you are an individual researcher and want to use Pavlovia without a licence, you can pay per participant. Credits cost £0.26 per participant and can be purchased on `the pavlovia store <https://pavlovia.org/store>`_.
+If you are an individual researcher and want to use Pavlovia without a licence, you can pay per participant. Credits cost |price.university.credit| per participant and can be purchased on `the pavlovia store <https://pavlovia.org/store>`_.
 
 .. tab-set::
     :sync-group: customer
@@ -39,7 +40,7 @@ If you are an individual researcher and want to use Pavlovia without a licence, 
             .. grid-item-card:: Licence-only
                 :text-align: center
 
-                **£2,000 annually** :abbr:`i (We offer reduced rates for emerging economies)`
+                |price.university.licenceonly| **annually** :abbr:`i (We offer reduced rates for emerging economies)`
 
                 :octicon:`check` Open access `library of experiment demos <https://pavlovia.org/explore/demos?sort=DEFAULT>`_
 
@@ -61,7 +62,7 @@ If you are an individual researcher and want to use Pavlovia without a licence, 
                 :text-align: center
                 :class-footer: recommended
                 
-                **£2,200 annually** :abbr:`i (We offer reduced rates for emerging economies)`
+                |price.university.standard| **annually** :abbr:`i (We offer reduced rates for emerging economies)`
 
                 :octicon:`check` Open access `library of experiment demos <https://pavlovia.org/explore/demos?sort=DEFAULT>`_
 
@@ -90,7 +91,7 @@ If you are an individual researcher and want to use Pavlovia without a licence, 
             .. grid-item-card:: Plus
                 :text-align: center
 
-                **£5,200 annually** :abbr:`i (We offer reduced rates for emerging economies)`
+                |price.university.plus| **annually** :abbr:`i (We offer reduced rates for emerging economies)`
 
                 :octicon:`check` Open access `library of experiment demos <https://pavlovia.org/explore/demos?sort=DEFAULT>`_
 
@@ -122,7 +123,7 @@ If you are an individual researcher and want to use Pavlovia without a licence, 
             .. grid-item-card:: Licence-only
                 :text-align: center
 
-                **£4,000 annually** :abbr:`i (We offer reduced rates for emerging economies)`
+                |price.commercial.licenceonly| **annually** :abbr:`i (We offer reduced rates for emerging economies)`
 
                 :octicon:`check` Open access `library of experiment demos <https://pavlovia.org/explore/demos?sort=DEFAULT>`_
 
@@ -143,7 +144,7 @@ If you are an individual researcher and want to use Pavlovia without a licence, 
             .. grid-item-card:: Standard
                 :text-align: center
                 
-                **£4,400 annually** :abbr:`i (We offer reduced rates for emerging economies)`
+                |price.commercial.standard| **annually** :abbr:`i (We offer reduced rates for emerging economies)`
 
                 :octicon:`check` Open access `library of experiment demos <https://pavlovia.org/explore/demos?sort=DEFAULT>`_
 
@@ -168,7 +169,7 @@ If you are an individual researcher and want to use Pavlovia without a licence, 
             .. grid-item-card:: Plus
                 :text-align: center
 
-                **£10,400 annually** :abbr:`i (We offer reduced rates for emerging economies)`
+                |price.commercial.plus| **annually** :abbr:`i (We offer reduced rates for emerging economies)`
 
                 :octicon:`check` Open access `library of experiment demos <https://pavlovia.org/explore/demos?sort=DEFAULT>`_
 
@@ -211,7 +212,7 @@ We've helped many researchers to create and debug experiments, as well as delive
 
             .. grid-item-card:: Support
 
-                **£70 per hour**
+                |price.university.support| **per hour**
 
                 Our team of Scientists can help to:
 
@@ -225,7 +226,7 @@ We've helped many researchers to create and debug experiments, as well as delive
             
             .. grid-item-card:: Senior Staff Support
 
-                **£140 per hour**
+                |price.university.seniorsupport| **per hour**
 
                 Sometimes your project may need time from a developer or senior staff member, these rates would apply in cases where we are:
                 
@@ -242,7 +243,7 @@ We've helped many researchers to create and debug experiments, as well as delive
 
             .. grid-item-card:: Support
 
-                **£140 per hour**
+                |price.commercial.support| **per hour**
 
                 Our team of Scientists can help to:
 
@@ -256,7 +257,7 @@ We've helped many researchers to create and debug experiments, as well as delive
     
             .. grid-item-card:: Senior Staff Support
 
-                **£280 per hour**
+                |price.commercial.seniorsupport| **per hour**
 
                 Sometimes your project may need time from a developer or senior staff member, these rates would apply in cases where we are:
                 

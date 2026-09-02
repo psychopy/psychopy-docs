@@ -1,3 +1,5 @@
+.. include:: /price_defs.rst
+
 .. _psychopyVersusJsPsych:
 
 Comparing PsychoPy with jsPsych
@@ -33,8 +35,8 @@ Both PsychoPy and jsPsych have options for presenting surveys and questionnaires
 Pricing
 --------
 
-Both PsychoPy and jsPsych are free and open-source, meaning you can run in-lab studies for free with both platforms. For online studies requiring a server, you can host studies made on either platform on Pavlovia.org. Pavlovia is a paid for service, but with minimal costs (£0.26 per participant or £2000 for a whole institute unlimited use). 
+Both PsychoPy and jsPsych are free and open-source, meaning you can run in-lab studies for free with both platforms. For online studies requiring a server, you can host studies made on either platform on Pavlovia.org. Pavlovia is a paid for service, but with minimal costs (|price.university.credits| per participant or |price.university.licenceonly| for a whole institute unlimited use). 
 
 With jsPsych, there is an option for free with Jatos and MindProbe (although this comes with no security certifications, whereas Pavlovia is ISO 27001 certified for institutions that need secure data collection). jsPsych studies can also run on cognition.run where unlimited task uploads costs $2990/per year. Or you can self-host a Jatos server, but then the staff time required might be more expensive and, again, the security would likely be less strong if you aren't very highly trained in server security maintenance (independent penetration testing, for instance, costs thousands of pounds).
 
-Both PsychoPy and jsPsych have free community support forums and benefit from an enthusiastic community of open-source supporters, amd there are also options with both platforms to pay for professional support if desired. For PsychoPy and Pavlovia we charge £70 an hour or support can be added onto your Pavlovia institute licence, and for jsPsych you can contact the creators directly for a quote or you can purchase organisation level support with Mindprobe for 5000 Euros per year.
+Both PsychoPy and jsPsych have free community support forums and benefit from an enthusiastic community of open-source supporters, and there are also options with both platforms to pay for professional support if desired. For PsychoPy and Pavlovia we charge |price.university.support| an hour or support can be added onto your Pavlovia institute licence, and for jsPsych you can contact the creators directly for a quote or you can purchase organisation level support with Mindprobe for 5000 Euros per year.

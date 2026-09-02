@@ -1,3 +1,5 @@
+.. include:: /price_defs.rst
+
 .. _psychopyVersusPsychtoolbox:
 
 Comparing PsychoPy with Open Sesame
@@ -38,7 +40,7 @@ Pricing
 
 Both PsychoPy and Open Sesame are free for building and running studies. For in-lab studies they won't cost you anything. 
 
-If you want to run a study online then PsychoPy offers a hosting service, pavlovia.org (costing £0.26 per respondent or £2000 for an unlimited institutional licence). Open Sesame has the option of JATOS or MindProbe servers, which are free but don't offer the security certification that Pavlovia does. Both PsychoPy and Open Sesame offer paid consultancy support for users needing help creating their experiments. 
+If you want to run a study online then PsychoPy offers a hosting service, pavlovia.org (costing |price.university.credit| per respondent or |price.university.licenceonly| for an unlimited institutional licence). Open Sesame has the option of JATOS or MindProbe servers, which are free but don't offer the security certification that Pavlovia does. Both PsychoPy and Open Sesame offer paid consultancy support for users needing help creating their experiments. 
 
 Community
 ------------------

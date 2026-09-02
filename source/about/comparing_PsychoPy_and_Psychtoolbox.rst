@@ -1,3 +1,5 @@
+.. include:: /price_defs.rst
+
 .. _psychopyVersusPsychtoolbox:
 
 Comparing PsychoPy with Psychtoolbox

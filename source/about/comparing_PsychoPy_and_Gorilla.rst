@@ -1,3 +1,5 @@
+.. include:: /price_defs.rst
+
 .. _psychopyVersusGorilla:
 
 Comparing PsychoPy with Gorilla
@@ -38,6 +40,6 @@ Pricing
 
 PsychoPy is completely free and always will be. That means you can build an experiment, run it on your local machine and gather data at no cost.
 
-If you want to run a study _online_ you can host the study using Pavlovia.org. Pavlovia is a paid-for service, but very low cost (£0.26 per participant or £2000 for a whole institution with unlimited use). By comparison, with Gorilla you can build your experiment for free, but you can't run it and collect data without credits or a licence (£1.09 per participant or options ranging up to £11340 for a department licence with unlimited use - see this page for updates on Gorilla's pricing). 
+If you want to run a study _online_ you can host the study using Pavlovia.org. Pavlovia is a paid-for service, but very low cost (|price.university.credit| per participant or |price.university.licenceonly| for a whole institution with unlimited use). By comparison, with Gorilla you can build your experiment for free, but you can't run it and collect data without credits or a licence (£1.09 per participant or options ranging up to £11,340 for a department licence with unlimited use - see this page for updates on Gorilla's pricing). 
 
 Both Pavlovia and Gorilla teams can provide training via onboarding sessions and private webinars. To buy the unlimited Pavlovia license including private webinars costs £5,200 compared with £20,470 for Gorilla.
