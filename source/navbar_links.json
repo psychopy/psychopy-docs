@@ -17,6 +17,7 @@
         "API": "/api/index",
         "Contribute": "/developers/index",
         "Blog": "https://blog.psychopy.org/",
-        "Ambassadors": "/ambassadors/index"
+        "Ambassadors": "/ambassadors/index",
+        "Accessibility": "/accessibility"
     }
 }
