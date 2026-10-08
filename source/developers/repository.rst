@@ -49,29 +49,45 @@ Around a major (feature) release the two trunks will generally become synchronis
 PsychoPy commit messages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Informative commit messages are really useful when we have to go back through the repository finding the time that a particular change to the code occurred. Precede your message with one or more of the following:
+Informative commit messages are really useful when we have to go back through the repository finding the time that a particular change to the code occurred. PsychoPy follows the [Conventional Commits](https://conventionalcommits.org/) spec, so you should precede your message with one of the following "tags":
 
-* *BF* : bug fix
-* *FF* : 'feature' fix. This is for fixes to code that hasn't been released
-* *RF* : refactoring
-* *NF* : new feature
-* *ENH* : enhancement (improvement to existing code)
-* *DOC*: for all kinds of documentation-related commits
-* *TEST*: for adding or changing tests
+* ``fix`` : Bug fix
+* ``refactor`` : Restructuring code
+* ``feat`` : Add a new feature or improvement
+* ``docs``: Any changes to documentation (including comments, demos and function docstrings)
+* ``test``: Any changes to the test suite
+* ``chore``: Changes to processes, actions, etc. (devops stuff, basically)
 
-When making commits that fall into several commit categories (e.g., BF and TEST), **please make separate commits for each category** and **avoid concatenating commit message prefixes**. E.g., please do not use `BF/TEST`, because this will affect how commit messages are sorted when we pull in fixes for each release.
+You can add the following after the tag (before the ``:``) to give more specific detail:
 
-NB: The difference between BF and FF is that BF indicates a fix that is appropriate for back-porting to earlier versions, whereas FF indicates a fix to code that has not been released, and so cannot be back-ported.
+* ``(reg)`` : Regression scope - indicates that you are fixing/improving something unreleased, e.g. ``fix(reg): Forgot to delete print statement from debugging a new feature``
+* ``!`` : Breaking change - indicates that this change may break users' existing experiments, e.g. ``refactor!: Completely rearrange everything``
+
+You can also indicate a breaking change by adding ``BREAKING CHANGE:`` to the commit footer.
+
+.. note::
+    PsychoPy only recently (2026) moved over to Conventional Commits, so you may be familiar with our old commit message style. If you are, here is how the old tags correspond to the new ones:
+    
+    * *BF* -> *fix*
+    * *FF* -> *fix(reg)*
+    * *RF* -> *refactor*
+    * *NF* -> *feat*
+    * *ENH* -> *feat*
+    * *DOC* -> *docs*
+    * *TEST* -> *test*
+    * *SYS* -> *chore*
+
+When making commits that fall into several commit categories (e.g. *fix* and *test*), **please make separate commits for each category** and **avoid concatenating commit message prefixes**. E.g., please do not use *fix/test*, because this will affect how commit messages are sorted when we pull in fixes for each release.
 
 So, a good commit message looks something like this. Note a) the commit title tells us what was fixed, the message tells us how that was achieved and includes a link to the GitHub issue if possible.
 
 .. code-block:: none
 
-    BF: fixed the updating of the stimulus position when units='deg'
+    fix: Fixed the updating of the stimulus position when units='deg'
 
     The problem turned out to be that we had a typo in the attribute name
 
-    fixes GH-12323  [causes that GitHub issue to be closed and links them]
+    Fixes #12323
 
 .. _setupRepo:
 
