@@ -1,144 +1,171 @@
 .. _eginetstation:
 
-Sending triggers via EGI NetStation
-=================================================
+Sending events via EGI NetStation
+=================================
 
-Communicating via EGI NetStation is very similar to communicating via a serial port, in that you'll need to add some code components into your experiment. 
+The `PsychoPy EGI NetStation plugin
+<https://pypi.org/project/psychopy-egi-pynetstation/>`_ adds Builder Components,
+Device Manager integration, and a Python interface for controlling recordings
+and sending ECI event markers to EGI/Magstim NetStation systems. It uses the
+`egi-pynetstation <https://egi-pynetstation.readthedocs.io/>`_ network library.
 
-The egi-pynetstation package allows communication using an NTP protocol. It is important to first verify your hardware setup. The code is compatible with EGI (also known as Philips EGI and most recently MagStim-EGI) amplifiers 300 and 400 series. 
-While 400 series amplifiers serve as their own NTP server so are able to work with newer macOS versions (10.14.x as of April 2023).  If you are using a 300-series amplifier you must be using macOS 10.12. 
-This is because EGI has configured its own NTP server for use with 300-series amps; users who wish to alter this configuration with a 300-series amp should continue to use PsychoPy2's EGI package or
-investigate ports of the old package to Python3.
+.. note::
 
-The old EGI "pynetstation" package uses a "polling" method of asking the EGI system what time it is before sending events. While generally accurate, delays in drawing to the screen can cause (usually minor) inconsistencies in timing. 
-This pakcage's implementation of NTP timing should be superior to the older method.
+   ``psychopy-egi-pynetstation`` is an independent, community-maintained
+   project. It is not affiliated with or endorsed by EGI or Magstim EGI.
 
-Step one: Verify your Amplifier and NTP server are active
---------------------------------------------------------------------------------------------------
+Requirements and installation
+-----------------------------
 
-Users of 300 series amplifiers should open a terminal and run the following command:  ``sntp -d localhost``
+The plugin requires |PsychoPy| 2026.1 or newer and Python 3.10 or newer. You
+also need the IP address of the computer running NetStation, its ECI port
+(normally ``55513``), and the amplifier NTP server address.
 
-Users of 400 series amplifiers may input the IP of your amplifier (usually 10.10.10.51) in the command above or open the webpage associated with the amplifier on the EGI laptop/desktop. 
+Install ``psychopy-egi-pynetstation`` from **Tools > Plugin/packages manager**,
+or install it into the Python environment that runs |PsychoPy|:
 
-.. figure:: /images/egi-netstation.png
+.. code-block:: console
 
-Notice that this page gives information about your amplifier address (10.10.10.51) and the Net Station computer (10.10.10.42).
+   python -m pip install psychopy-egi-pynetstation
 
-Step two: Install EGI NetStation Python Library on older versions of PsychoPy
---------------------------------------------------------------------------------------------------
+Restart |PsychoPy| after installation. The three EGI Components then appear in
+the **EEG** section of the Components panel.
 
-If you're using PsychoPy version 2022.1.3 or older, you'll need to install the EGI NetStation library using the Command Prompt in Windows. You will only need to do this once.
+.. figure:: /images/egi-plugin-components.png
+   :alt: PsychoPy Builder with the EGI Components shown under EEG
+   :width: 100%
 
-* To access the Command Prompt, just type `Command Prompt `into the search bar next to your `Start Menu` icon and select it.
-* You now need to copy the file path to the file `python.exe` that is **inside** your PsychoPy folder (usually this is installed in ``C:\Program Files\PsychoPy``).
-* When you've found the PsychoPy folder, copy the file path and paste it into the Command Prompt, surrounded by quotation marks (" ").
-* Now, add ``\python.exe`` to the line, so that the line reads: ``"C:\Program Files\PsychoPy\python.exe"`` (or similar, depending on where your PsychoPy is saved).
-* Finally, add ``-m pip install egi-pynetstation`` to the line.
-* Your line should now look similar to this: ``"C:\Program Files\PsychoPy\python.exe" -m pip install egi-pynetstation`` as shown in the following screenshot:
+   EGI Start Recording, EGI Send Event, and EGI Stop Recording.
 
-.. figure:: /images/cmd.png
+Configure NetStation in Device Manager
+--------------------------------------
 
-You're now ready to go!
+Open **Device Manager**, add **EGI NetStation**, and choose **EGI NetStation
+(manual configuration)**. NetStation cannot be auto-discovered; this entry is
+an editable profile, not evidence that an amplifier was detected. Give the
+device a stable label such as ``netstation``.
 
-Step three: Verify / Update the egi-pynetstation package to 1.0.1
---------------------------------------------------------------------------------------------------
+.. figure:: /images/egi-plugin-device-add.png
+   :alt: Adding an EGI NetStation manual profile in Device Manager
+   :width: 65%
 
-If you are using Psychopy versions from 2023 or later, please verify that you are using version 1.0.1 of the package the PsychoPy package manager update the package.
+On the **Device** tab, replace the example network values with those used by
+your acquisition system. ``NTEL`` is the correct endianness for current Intel
+and Apple Silicon Macs, Windows, and most ARM64 Linux systems.
 
-* From the menu system, select Tools, Plugin/Package manager
-* Select the "Packages" tab
-* Search for "egi_pynetstation"
-* Verify the installed version is 1.0.1
-* If necessary, click the "Install" button
+.. figure:: /images/egi-plugin-device-network.png
+   :alt: EGI NetStation network options in Device Manager
+   :width: 75%
 
-Step four: Add code components into your Builder experiment
---------------------------------------------------------------------------------------------------
-To communicate with your NetStation EEG hardware, you'll need to add in some Python code components to your experiment.
+The **Drift** tab enables automatic background clock-drift sampling by default.
+The optional warmup setting builds a provisional model early in the session;
+enable it when timing tests show unstable startup drift.
 
-* First, add in a code component to your `Instructions` routine (or something similar, at the start of your experiment):
+.. figure:: /images/egi-plugin-device-drift.png
+   :alt: EGI NetStation drift options with warmup enabled
+   :width: 75%
 
-.. figure:: /images/insertCode.png
+Device profiles are stored in |PsychoPy|'s per-user ``devices.json`` file, not
+in the ``.psyexp`` file. When moving an experiment to another computer or user
+account, install the plugin and recreate or import a profile with the same
+device label before generating the experiment script.
 
-    Select the `Code component` from the `Custom` component drop-down
+Build an experiment
+-------------------
 
-* In the `Begin Experiment` tab, copy and paste the following code which will import the relevant libraries and set up the communication with your NetStation - be sure to change the IP address of the NetStation so that it matches that of your own NetStation::
+Add **EGI Start Recording** where recording should begin and select the device
+label created above. The plugin connects during Device Manager setup, so a
+separate Connect Component is not needed.
 
-    #Import Netstation library
-    from egi_pynetstation.NetStation import NetStation
+.. figure:: /images/egi-plugin-start-recording.png
+   :alt: EGI Start Recording selecting the netstation device
+   :width: 65%
 
-    #IP address of NetStation - CHANGE THIS TO MATCH THE IP ADDRESS OF YOUR NETSTATION
-    IP_ns = '10.10.10.42'
+Add **EGI Send Event** wherever a marker is needed. Event type must contain
+exactly four characters, such as ``stim`` or ``resp``. **Event duration (s)**
+is the duration stored in NetStation and defaults to ``0.1`` seconds; it is
+independent of the ordinary Builder Component stop field.
 
-    #IP address of amplifier (if using 300
-    #series, this is the same as the IP address of
-    #NetStation. If using newer series, the amplifier
-    #has its own IP address)
-    IP_amp = '10.10.10.51'
+To synchronize a marker with a visual onset, enter the visual Component's exact
+name in **Target visual Component** and place EGI Send Event below that visual
+Component in the Routine. The event is queued on the target's first drawing
+flip, and network transmission occurs asynchronously so it does not block the
+display refresh.
 
-    #Port configured for ECI in NetStation - CHANGE THIS IF NEEDED
-    port_ns = 55513
+.. figure:: /images/egi-plugin-send-event.png
+   :alt: EGI Send Event targeting a visual Component named text
+   :width: 65%
 
-    #Start recording and send trigger to show this
-    eci_client = NetStation(IP_ns, port_ns)
-    eci_client.connect(ntp_ip = IP_amp)
-    eci_client.begin_rec()
-    eci_client.send_event(event_type = 'STRT', start = 0.0)
+.. figure:: /images/egi-plugin-send-event-timeline.png
+   :alt: Routine timeline with an EGI event aligned to a visual Component
+   :width: 100%
 
-* Now, copy and paste the following code component to your trials routine in the `Begin Routine` tab, this just (re)sets a value at the start of the routine to indicate that no trigger has yet been sent::
+   Put EGI Send Event below its target visual Component in the Routine.
 
-    triggerSent = False
-    eci_client.resync()
+Finally, add **EGI Stop Recording** where recording should end. |PsychoPy|'s
+Device Manager also closes the connection during normal or early experiment
+shutdown, flushing queued events and reporting send or ECI-response failures.
 
-* Now, in the `Each Frame` tab of that same code component, add the following code to send a trigger OF NO MORE THAN FOUR CHARACTERS when your stimulus is presented. The :code:`.status` attribute here is checking whether the our stimulus has started, and if it has, PsychoPy sends the trigger to EGI NetStation. Note that most components in PsychoPy have the :code:`.status` attribute, so you could easily adapt this code to, for example, send a trigger when a response key is pressed::
+Use from Coder
+--------------
 
-    #Send trigger to NetStation - Change 'stim' to
-    #a meaningful trigger for your experiment OF NO MORE THAN FOUR CHARACTERS. You can
-    #also set the trigger in a conditions file.
+Builder is optional. A code experiment can construct the same wrapper directly:
 
-    if stimulus.status == STARTED and not triggerSent: #If the stimulus component has started and the trigger has not yet been sent. Change 'stimulus' to match the name of the component you want the trigger to be sent at the same time as
-        win.callOnFlip(eci_client.send_event, event_type = 'stim', label='stim') #Send the trigger, synced to the screen refresh
-        triggerSent = True #The trigger has now been sent, so we set this to true to avoid a trigger being sent on each frame
+.. code-block:: python
 
-* Finally, in a routine at the end of your experiment (the `Thanks for participating` screen for example) copy and paste the following::
+   from psychopy import visual
+   from psychopy_egi_pynetstation import EGINetStation
 
-    #Stop recording and disconnect
-    eci_client.end_rec()
-    eci_client.disconnect()
+   win = visual.Window()
+   ns = EGINetStation(
+       ip="10.10.10.42",
+       ntpIP="10.10.10.51",
+       port=55513,
+       driftWarmup=True,  # optional provisional early-session model
+   )
 
+   try:
+       ns.connect()
+       ns.beginRecording()
 
-Step five: Test your triggers
---------------------------------------------------------------------------------------------------
+       # Capture the event timestamp on the flip that presents the stimulus.
+       win.callOnFlip(
+           ns.sendEvent,
+           eventType="stim",
+           label="face",
+           duration=0.1,
+       )
+       win.flip()
+   finally:
+       ns.close()
+       win.close()
 
-* To check that everything works, we recommend that you set up a very basic experiment that looks similar to this:
+For events unrelated to a display refresh, such as a response, call
+``ns.sendEvent(...)`` directly. ``ns.close()`` safely stops an active recording,
+flushes queued events, reports session health, and disconnects.
 
-.. figure:: /images/serialExp.png
+Validate before collecting data
+-------------------------------
 
-* Turn on your EEG recording device and start recording as you would in your actual experiment, and just check that you see triggers coming through.
-* It's a good idea at this point to also check the timing of your stimulus presentation and your triggers using, for example, a photodiode for visual stimuli.
-* Doing these checks with a very basic experiment just means that you don't accidentally change something on your real experiment file that you don't want to, and also means you don't have to disable components or sit through lots of instructions etc!
+Before a production session:
 
+* confirm that ECI is enabled and both network addresses are reachable;
+* send a four-character test marker and inspect it in NetStation;
+* use a photodiode or equivalent measurement to validate marker-to-stimulus
+  timing on the actual acquisition and display computers;
+* inspect the |PsychoPy| log for asynchronous event failures, rejected ECI
+  responses, or drift-health warnings; and
+* repeat the check after changes to the display, network, operating system, or
+  experiment timing.
 
-See Built-in Example: Stroop Task
---------------------------------------------------------------------------------------------------
+More information
+----------------
 
-There is a complete experiment built into PsychoPy demonstrating EEG triggers to the EGI amplifier. 
-
-.. figure:: /images/egi-netstationDemo.png
-
-To access the demo:
-
-* Select "Demos" menu
-* If not previously done, select "Unpack Demos"
-* Select the "Demos" menu again, click "Hardware", select "EGI_netstation"
-* This built-in demo should run and send appropriate triggers to the EGI amplifier/computer
-
-
-If there is a problem - We want to know!
---------------------------------------------------------------------------------------------------
-
-If you have followed the steps above and are having an issue with triggers, please post details of this on the `PsychoPy Forum <https://discourse.psychopy.org/>`_.
-
-Further documentation can be found on the `egi-pynetstation RTD <https://egi-pynetstation.readthedocs.io/en/latest/>`_ as well as their
-`github project <https://github.com/nimh-sfim/egi-pynetstation>`_ .
-
-We are constantly looking to update our documentation so that it's easy for you to use PsychoPy in the way that you want to. Posting in our forum allows us to see what issues users are having, offer solutions, and to update our documentation to hopefully prevent those issues from occurring again!
+See the `plugin documentation
+<https://psychopy-egi-pynetstation.readthedocs.io/>`_ for every Builder option,
+drift diagnostics, timing guidance, troubleshooting, and the complete Python
+API. Source code and issue reporting are available from the
+`psychopy-egi-pynetstation GitHub project
+<https://github.com/pmolfese/psychopy-egi-pynetstation>`_. For help with the
+|PsychoPy| experiment itself, use the
+`PsychoPy Forum <https://discourse.psychopy.org/>`_.
