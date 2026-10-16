@@ -52,6 +52,7 @@ Ensure that the height unit you are using is appropriate to be read or seen on m
 Accessible font choices
 =============================================
 :bdg-primary-line:`Sight; Accessibility for those with limited sight`
+:bdg-primary-line:`Reading; Accessibility for those with reading difficulties`
 
 Use a Sans Serif font (i.e., without decorative strokes) to facilitate readability (you can find some guidance on font recommendations `here <https://www.section508.gov/develop/fonts-typography/>`__). Sans Serif fonts include Arial, the default font of PsychoPy text. They also include Calibri, Open Sans, or Verdana. You can modify the font by typing its name in the formatting setting window of the text component. If you do not have a specific font installed, PsychoPy will ask you to download it.
 
