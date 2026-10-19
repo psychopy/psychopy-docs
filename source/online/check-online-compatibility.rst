@@ -43,6 +43,7 @@ When creating your experiment in PsychoPy Builder, you can choose to selectively
     :align: center
     :figclass: align-center
     :scale: 50
+    :alt:"PsychoPy Builder component filter showing the PsychoJS (online) option, with red arrows pointing to the filter icon and online option."
 
     Buttons used to filter components for online use in PsychoPy Builder.
 
