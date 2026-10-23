@@ -38,8 +38,8 @@ You can use a number of different "Loop Types" in |PsychoPy|, this controls the 
 After saving this as a spreadsheet (.xlsx or .csv), we could then add this to the "Conditions" field of our loop. Let's imagine we want to present each letter twice, so we set `nReps` to 2.  We could then use the following Loop Types:
 
 *   **Random** - present a - b in a random order, because we have nReps at 2, this would be repeated twice e.g. :code:`[c, a, b, a, c, b]`
-*   **Full Random** - present a - b in a random order but also take into account the number of nReps. Here, imagine that rather than having 3 items in the bag that we sample from, and repeat this twice, we instead have 6 items int he bag that are randomly sampled from. This would mean that with fullRandom, but not random, it would be possible to get the following order of trials e.g. :code:`[a, a, b, c, c, b]` - notice that a was sampled twice in the first 2 trials.
-*   **sequential** - present the rows in the order they are set i nt he spreadsheet. Currently |PsychoPy| does not have inbuilt support for specific randomisation constraints, so if you need a specific pseudorandom order, preset this in your spreadsheet file and use a "sequential" loopType.
+*   **Full Random** - present a - b in a random order but also take into account the number of nReps. Here, imagine that rather than having 3 items in the bag that we sample from, and repeat this twice, we instead have 6 items in the bag that are randomly sampled from. This would mean that with fullRandom, but not random, it would be possible to get the following order of trials e.g. :code:`[a, a, b, c, c, b]` - notice that a was sampled twice in the first 2 trials.
+*   **sequential** - present the rows in the order they are set in the spreadsheet. Currently |PsychoPy| does not have inbuilt support for specific randomisation constraints, so if you need a specific pseudorandom order, preset this in your spreadsheet file and use a "sequential" loopType.
 *   **staircase** - for use with adaptive procedures, create an output variable called :code:`level` that can then be used to set the parameter of a stimulus (e.g. it's opacity) in an adaptive fashion. This allows researchers to converge upon a participants threshold by adjusting the value of :code:`level` in accordance with performance.
 *   **interleaved staircases** - for use with multiple staircases that are interleaved. This can also be used to implement other staircasing algorithms such as `QUEST (Watson and Pelli, 1983) <https://link.springer.com/content/pdf/10.3758/BF03202828.pdf>`_ via :class:`QuestHandler`.
 
@@ -186,9 +186,9 @@ QUEST Plus is an extension of the original QUEST procedure set out by Watson and
     * prior: The prior probabilities to assign to the parameter values.
     * startIntensity: The very first intensity (or stimulus level) to present.
     * stimScale: The scale on which the stimulus intensities (or stimulus levels) are provided. Currently supported are the log scale, `log10`; decibels, `dB`; and a linear scale, `linear`.
-    * stimSelectionMethod: How to select the next stimulus. `minEntropy` will select the stimulus that will minimize the expected entropy. `minNEntropy` will randomly pick pick a stimulus from the set of stimuli that will produce the smallest, 2nd-smallest, ..., N-smallest entropy. This can be used to ensure some variation in the stimulus selection (and subsequent presentation) procedure. The number `N` will then have to be specified via the `stimSelectionOption` parameter.
+    * stimSelectionMethod: How to select the next stimulus. `minEntropy` will select the stimulus that will minimize the expected entropy. `minNEntropy` will randomly pick a stimulus from the set of stimuli that will produce the smallest, 2nd-smallest, ..., N-smallest entropy. This can be used to ensure some variation in the stimulus selection (and subsequent presentation) procedure. The number `N` will then have to be specified via the `stimSelectionOption` parameter.
     * stimSelectionOptions: This parameter further controls how to select the next stimulus in case `stimSelectionMethod=minNEntropy`. The dictionary supports two keys:`N` and `maxConsecutiveReps`. `N` defines the number of "best" stimuli (i.e., those which produce the smallest `N` expected entropies) from which to randomly select a stimulus for presentation in the next trial. `maxConsecutiveReps` defines how many times the exact same stimulus can be presented on consecutive trials. For example, to randomly pick a stimulus from those which will produce the 4 smallest expected entropies, and to allow the same stimulus to be presented on two consecutive trials max, use `stimSelectionOptions=dict(N=4, maxConsecutiveReps=2)`. To achieve reproducible results, you may pass a seed to the random number generator via the `randomSeed` key.
-    * paramEstimationMethod: How to calculate the final parameter estimate. `mean` returns the mean of each parameter, weighted by their respective posterior probabilities. `mode` returns the the parameters at the peak of the posterior distribution.
+    * paramEstimationMethod: How to calculate the final parameter estimate. `mean` returns the mean of each parameter, weighted by their respective posterior probabilities. `mode` returns the parameters at the peak of the posterior distribution.
 
 * Complete these fields as required for your experiment and click OK to save the loop.
 * Add as many staircases as you need to the conditions file.
@@ -221,8 +221,8 @@ Note that |PsychoPy| uses Python's built-in slicing syntax (where the first inde
 
     >>> range(100)[5:8] #slice 5:8 of a standard set of indices
     [5, 6, 7]
-    >>> range(100)[5:10:2] #slice 5:8 of a standard set of indices
-    [5, 7, 9, 11, 13, 15, 17, 19]
+    >>> range(100)[5:10:2] #slice 5:10:2 of a standard set of indices
+    [5, 7, 9]
 
 Check that the conditions you wanted to select are the ones you intended!
 
@@ -237,7 +237,7 @@ Once you have a loop around the routine you want to repeat, you can use the vari
   b
   c
 
-You could then add a Text component and in the *text* field type :code:`$letter` and then set the corresponding dropsown box to "set every repeat". This indicates that you want the value of this parameter to change on each iteration of your loop, and the value of that parameter on each loop will correspond to the value of "letter" drawn on each trial.
+You could then add a Text component and in the *text* field type :code:`$letter` and then set the corresponding drop-down box to "set every repeat". This indicates that you want the value of this parameter to change on each iteration of your loop, and the value of that parameter on each loop will correspond to the value of "letter" drawn on each trial.
 
 .. note::
     You only need to use the $ sign if that field name does not already contain a $ sign! You also don't need several dollar signs in a field e.g. you wouldn't set the position of a stimulus on each repeat using :code:`($myX, $myY)` instead you would just use :code:`$(myX, myY)` - this is because the dollar sign indicates that this field will now accept python code, rather than that this value corresponds to a variable.
