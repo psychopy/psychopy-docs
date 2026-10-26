@@ -126,7 +126,7 @@ Universities all over the world are using PsychoPy® for teaching students about
 
         * Flexible and intuitive `Builder <https://www.psychopy.org/builder/>`__ interface to create huge range of studies
         * `Textbook(s) <https://www.sagepub.com/shop/buy-a-book/building-experiments-in-psychopy-2-273700>`__ suitable for both undergraduate and professional audiences
-        * Many further `resources <resources/resources.html>`__ for learning and teaching, including `Youtube tutorials <https://www.youtube.com/playlist?list=PLFB5A1BE51964D587>`__, online tutorials and workshops.
+        * Many further `resources <https://psychopy.org/resources/index.html>`__ for learning and teaching, including `Youtube tutorials <https://www.youtube.com/playlist?list=PLFB5A1BE51964D587>`__, online tutorials and workshops.
         * The `Pavlovia repository <https://pavlovia.org>`__ of shared experiments accessible directly from the application (requires PsychoPy®) to search for and share your studies.
 
 Precise enough for psychophysics

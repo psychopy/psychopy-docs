@@ -54,7 +54,7 @@ Materials for Coder
   to an intensive residential Python workshop in Nottingham.
 - Marco Bertamimi's book, `Programming Illusions for Everyone`_ is a fun way to
   learn about stimulus rendering in PsychoPy by learning how to create visual illusions
-- `Programming for Psychology in Python - Vision Science <http://www.djmannion.net/programming_vision>`_
+- `Programming for Psychology in Python - Vision Science <https://www.djmannion.net/psych_programming/vision/index.html>`_
   has lessons and screencasts on PsychoPy (by `Damien Mannion <http://www.djmannion.net/>`_, UNSW Australia).
 
 
