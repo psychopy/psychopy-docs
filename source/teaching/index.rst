@@ -7,13 +7,6 @@ There are a number of further resources to help learn/teach about PsychoPy.
 
 If you also have PsychoPy materials/course then please let us know so that we can link to them from here too!
 
-.. _alevel:
-
-Teaching PsychoPy at A-level?
------------------------------
-
-The resources below are useful for anyone interested in learning PsychoPy, but if you're teaching (or learning!) at A-level or lower we now have a dedicated page for `schools resources! <https://schools.psychopy.org>`_
-
 .. _youtube:
 
 Youtube tutorials
