@@ -48,7 +48,7 @@ Download
         
         We will continue to release new versions until PsychoPy Studio is stable enough to replace it.
 
-        .. button-link:: https://github.com/psychopy/psychopy/releases/download/2026.2.5/StandalonePsychoPy-2026.2.5-win64-3.10.exe
+        .. button-link:: https://github.com/psychopy/psychopy/releases/download/2026.2.5/StandalonePsychoPy-2026.2.5post1-win64-3.10.exe
           :color: primary
 
           PsychoPy Standalone 2026.2.5
@@ -76,7 +76,7 @@ Download
         
         We will continue to release new versions until PsychoPy Studio is stable enough to replace it.
 
-        .. button-link:: https://github.com/psychopy/psychopy/releases/download/2026.2.5/StandalonePsychoPy-2026.2.5-macos-arm64-3.11.dmg
+        .. button-link:: https://github.com/psychopy/psychopy/releases/download/2026.2.5/StandalonePsychoPy-2026.2.5post1-macos-arm64-3.11.dmg
           :color: primary
 
           PsychoPy Standalone 2026.2.5
