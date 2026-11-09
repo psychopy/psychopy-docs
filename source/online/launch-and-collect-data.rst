@@ -76,6 +76,7 @@ If you are using a third-party recruitment platform, ensure that you follow thei
   :maxdepth: 1
 
   MTurk <mturkIntegration>
+  Populiva <populivaIntegration>
   Profilic <prolificIntegration>
   Qualtrics <qualtricsIntegration>
   SONA <sonaIntegration>
