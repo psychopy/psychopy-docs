@@ -27,6 +27,7 @@ You can:
     :align: center
     :figclass: align-center
     :scale: 50
+    :alt: "An experiment dashboard, highlighting the download tab"
 
     How to access template experiment files and download the files.
 
