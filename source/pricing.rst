@@ -285,6 +285,34 @@ What our consultancy clients say
 
         +++
         **Anonymous**
+
+    .. card::
+
+        “The scientists at Open Science Tools are excellent, professional, and friendly. Their expertise has enhanced my research program and my teaching. I highly recommend Open Science Tools, and I look forward to working with them again.”
+
+        +++
+        **Nestor Matthews, Professor, Department of Psychology and Neuroscience Program, Denison University**
+
+    .. card::
+
+        “Working directly with the consultancy team has been one of my best decisions for my lab! They are knowledgeable, attentive, and genuinely invested in helping. I plan to come to them with any other needs in the future!”
+
+        +++
+        **Anonymous**
+
+    .. card::
+
+        “Excellent for getting my study going that saved mountains of time in terms of task development, testing, and debugging. I would highly recommend for anyone who may not have the time to develop/tweak their behavioral tasks and surveys. In addition, the PsychoPy team were very professional and personable, making it easy to work with them. Overall, you're in good hands when getting their help on your projects.”
+
+        +++
+        **Anonymous**
+
+    .. card::
+
+        “At Synapse NeuroAnalytics, we’ve had an excellent experience working with Open Science Tools. Their team is extremely responsive, professional, and knowledgeable. We’ve particularly appreciated their clear communication and willingness to take the time to understand our needs. A pleasure to work with, highly recommended!”
+
+        +++
+        **Synapse NeuroAnalytics Inc. **
     
     .. card::
 
