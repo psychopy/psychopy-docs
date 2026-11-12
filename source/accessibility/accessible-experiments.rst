@@ -5,15 +5,16 @@ How to create accessible experiments?
 If you are working with a specific population or clinical group, you might want to adapt your experiment in various ways to make it easy for your sample to interact with. 
 
 **Resources:**
+
 .. toctree:: 
    :maxdepth: 1
-`W3C Accessibility Principles <https://www.w3.org/WAI/fundamentals/accessibility-principles/>`__ 
+   `W3C Accessibility Principles <https://www.w3.org/WAI/fundamentals/accessibility-principles/>`__ 
 
-`W3C How to meet WCAG (Quickref) <https://www.w3.org/WAI/WCAG22/quickref/>`__
+   `W3C How to meet WCAG (Quickref) <https://www.w3.org/WAI/WCAG22/quickref/>`__
 
-`Europa POUR-CAF principles: Accessible colour palettes <https://data.europa.eu/apps/data-visualisation-guide/accessible-colour-palettes﻿>`__
+   `Europa POUR-CAF principles: Accessible colour palettes <https://data.europa.eu/apps/data-visualisation-guide/accessible-colour-palettes﻿>`__
 
-`Section 508: Fonts and typography <https://www.section508.gov/develop/fonts-typography/>`__
+   `Section 508: Fonts and typography <https://www.section508.gov/develop/fonts-typography/>`__
 
 
 
