@@ -295,6 +295,13 @@ What our consultancy clients say
 
     .. card::
 
+        “Kim helped me develop two tasks. Having an expert to help me debug my EEG task was especially useful given that small glitch can ruin the whole data collection. The email reply was timely and her work is professional.”
+
+        +++
+        **Anonymous**
+
+    .. card::
+
         “Working directly with the consultancy team has been one of my best decisions for my lab! They are knowledgeable, attentive, and genuinely invested in helping. I plan to come to them with any other needs in the future!”
 
         +++
