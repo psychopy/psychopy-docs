@@ -18,7 +18,7 @@ If you are working with a specific population or clinical group, you might want 
 
 
 
-Add text-to-speech and read aloud features
+Add text-to-speech and read-aloud features
 =============================================
 :bdg-primary-line:`Sight; Accessibility for those with limited sight`
 :bdg-primary-line:`Reading; Accessibility for those with reading difficulties`
@@ -31,7 +31,7 @@ Add volume adjustments
 =============================================
 :bdg-primary-line:`Hearing; Accessibility for those with hearing difficulties`
 
-Allow the participant to select the volume at which the sound is presented, to ensure it is at an appropriate level. You can start your experiment by presenting a sample sound in a loop and ask the participant to adjust their device volume to a comfortable level (and press a key or click an onscreen button to confirm the volume is at a comfortable level). Alternatively, you can ask your participant to use the keyboard or on-screen buttons to adjust the PsychoPy volume of sound components directly and then use this volume in all sound components throughout the task. A demo in which the participant can adapt the volume of a white noise recording with an on-screen slider can be found `here <https://pavlovia.org/InesJP/volume_master>`__.
+Allow the participant to select the volume at which the sound is presented, to ensure it is at an appropriate level. You can start your experiment by presenting a sample sound in a loop and ask the participant to adjust their device volume to a comfortable level (and press a key or click an on-screen button to confirm the volume is at a comfortable level). Alternatively, you can ask your participant to use the keyboard or on-screen buttons to adjust the PsychoPy volume of sound components directly and then use this volume in all sound components throughout the task. A demo in which the participant can adapt the volume of a white noise recording with an on-screen slider can be found `here <https://pavlovia.org/InesJP/volume_master>`__.
 
 
  
@@ -49,7 +49,7 @@ Allow participants to adjust font or stimulus size
 =============================================
 :bdg-primary-line:`Sight; Accessibility for those with limited sight`
 
-Ensure that the height unit you are using is appropriate to be read or seen on multiple screen sizes. For text, you can modify letter height in the Formatting tab within the component. For images, you can modify the size of stimuli in the Layout tab. You could also allow participants to choose the side of the text (demo `here <https://pavlovia.org/Consultancy/text_size>`__) or images (demo `here <https://pavlovia.org/Consultancy/cursor_size>`__). 
+Ensure that the height unit you are using is appropriate to be read or seen on multiple screen sizes. For text, you can modify letter height in the Formatting tab within the component. For images, you can modify the size of stimuli in the Layout tab. You could also allow participants to choose the size of the text (demo `here <https://pavlovia.org/Consultancy/text_size>`__) or images (demo `here <https://pavlovia.org/Consultancy/cursor_size>`__). 
 
 
 
@@ -66,7 +66,7 @@ Add sign language videos or text transcriptions for audio content
 =============================================
 :bdg-primary-line:`Hearing; Accessibility for those with hearing difficulties`
 
-You can add a video component to your routine that translates your audio content to sign language, or include a text component of sufficient contrast and size (demo `here <https://pavlovia.org/Consultancy/text_contrast>`__) that displays the dictation of the audio (demo `here <http://pavlovia.org/Consultancy/text_speech>`__).
+You can add a video component to your routine that translates your audio content into sign language, or include a text component of sufficient contrast and size (demo `here <https://pavlovia.org/Consultancy/text_contrast>`__) that displays the dictation of the audio (demo `here <http://pavlovia.org/Consultancy/text_speech>`__).
 When possible, pair audio cues with visual ones.
 
 
