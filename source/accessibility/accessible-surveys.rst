@@ -6,11 +6,11 @@ If you are working with a specific population or clinical group, you might want 
 
 **Resources:**
 
-.. toctree:: 
-   :maxdepth: 1
-  `W3C Accessibility Principles <https://www.w3.org/WAI/fundamentals/accessibility-principles/>`__ 
-  `W3C How to meet WCAG (Quickref) <https://www.w3.org/WAI/WCAG22/quickref/>`__
-  `Section 508: Fonts and typography <https://www.section508.gov/develop/fonts-typography/>`__
+-  `W3C Accessibility Principles <https://www.w3.org/WAI/fundamentals/accessibility-principles/>`__ 
+
+-  `W3C How to meet WCAG (Quickref) <https://www.w3.org/WAI/WCAG22/quickref/>`__
+
+-  `Section 508: Fonts and typography <https://www.section508.gov/develop/fonts-typography/>`__
 
 
 Add read-aloud features and ensure your text is screen-reader friendly
