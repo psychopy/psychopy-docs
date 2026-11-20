@@ -21,6 +21,9 @@ The plugin requires |PsychoPy| 2026.1 or newer and Python 3.10 or newer. You
 also need the IP address of the computer running NetStation, its ECI port
 (normally ``55513``), and the amplifier NTP server address.
 
+For older versions of |PsychoPy|, use the Coder examples in the
+`egi-pynetstation documentation <https://egi-pynetstation.readthedocs.io/>`_.
+
 Install ``psychopy-egi-pynetstation`` from **Tools > Plugin/packages manager**,
 or install it into the Python environment that runs |PsychoPy|:
 
